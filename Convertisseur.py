@@ -1,4 +1,13 @@
-
+def espace_bin(bin):
+    compteur = 0
+    espace_b = ""
+    for k in str(bin) :
+        if compteur == 4 :
+            compteur = 0
+            espace_b += " "
+        espace_b += k
+        compteur += 1
+    return espace_b
 
 def HexToDec (b):
     r = 0
@@ -116,11 +125,11 @@ while b1 == b1 :
 
   if choix == 1 :
      h = str(input("hexadecimale = "))
-     print(f"La conversion de {h} en hexadecimale est égale à {HexToBin(h)} ")
+     print(f"La conversion de {h} en hexadecimale est égale à {espace_bin(HexToBin(h))} ")
      continue
   elif choix == 2 :
      d = int(input("decimale = "))
-     print(f"La conversion de {d} en binaire est égale à {DecToBin(d)} ")
+     print(f"La conversion de {d} en binaire est égale à {espace_bin(DecToBin(d))} ")
      continue
   elif choix == 3 :
       h = str(input("hexadecimale = "))
